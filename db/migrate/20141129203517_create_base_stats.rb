@@ -5,8 +5,6 @@ class CreateBaseStats < ActiveRecord::Migration
       t.integer :vigor
       t.integer :arcane
       t.integer :cunning
-
-      
       t.timestamps
     end
   end

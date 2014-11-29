@@ -6,6 +6,8 @@ class CreateResources < ActiveRecord::Migration
       t.interger :value
       t.belongs_to :card
       t.belongs_to :tile
+      t.belongs_to :code
+      t.belongs_to :hand
       t.timestamps
     end
   end
