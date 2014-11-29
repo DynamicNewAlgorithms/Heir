@@ -3,7 +3,7 @@ class CreateResources < ActiveRecord::Migration
     create_table :resources do |t|
       t.string :name
       t.string :kind
-      t.interger :value
+      t.integer :value
       t.belongs_to :card
       t.belongs_to :tile
       t.belongs_to :code
