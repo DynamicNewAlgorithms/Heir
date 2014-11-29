@@ -1,8 +1,8 @@
 class CreateRoads < ActiveRecord::Migration
   def change
     create_table :roads do |t|
-      t.interger :from_id
-      t.interger :to_id
+      t.integer :from_id
+      t.integer :to_id
       t.belongs_to :code
       t.timestamps
     end
