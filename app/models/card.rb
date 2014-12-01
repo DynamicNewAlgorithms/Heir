@@ -1,3 +1,21 @@
 class Card < ActiveRecord::Base
-	has_one: base_stat
+	belongs_to :base_stat
+  belongs_to :hand
+  belongs_to :code
+  has_one :tile
+
+  validates :name,:base_stat_id, presence: true
+  validate :only_in_one_place
+
+  def only_in_one_place
+    if hand.nil? && tile.nil?
+      false
+    elsif hand.nil?
+      true
+    elsif tile.nil?
+      true
+    else
+      false
+    end
+  end
 end
