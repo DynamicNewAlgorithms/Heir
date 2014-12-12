@@ -4,6 +4,8 @@ class Card < ActiveRecord::Base
   belongs_to :code
   has_one :tile
 
+  has_many :resources
+
   validates :name,:base_stat_id, presence: true
   validate :only_in_one_place
 
